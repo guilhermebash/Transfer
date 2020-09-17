@@ -1,0 +1,9 @@
+{% if error %}
+    <p>{{message}}</p>
+{% endif %}
+
+<form method="POST" action="/login">
+    <input type="text" name="user" value="{{user}}" placeholder="Nome"/>
+    <input type="password" name="password" placeholder="Senha"/>
+    <input type="submit" value="logar">
+</form>
