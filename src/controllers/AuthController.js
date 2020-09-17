@@ -1,6 +1,6 @@
 const axios = require('axios');
 const { render } = require('nunjucks');
-const connection = require('../connection');
+const connection = require('../../connection');
 
 module.exports = {
     async get(request, response){
@@ -8,8 +8,6 @@ module.exports = {
     },
 
     async post(request, response){
-
-        console.log(connection);
 
         let { user, password } = request.body;
 
