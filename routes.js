@@ -9,5 +9,6 @@ routes.get('/login', AuthController.get);
 routes.post('/login', AuthController.post);
 
 routes.get('/dashboard', DashboardController.get);
+routes.get('/menus', DashboardController.menus);
 
 module.exports = routes;

@@ -3,15 +3,19 @@ const app = express();
 const nunjucks = require('nunjucks');
 const bodyParser = require('body-parser');
 const session = require('express-session');
+const dateFilter = require('nunjucks-date-filter');
 
 const routes = require('./routes');
 
 nunjucks.configure(__dirname + '/views');
 
-nunjucks.configure('views', {
+let env = nunjucks.configure('views', {
     autoescape: true,
     express: app
 });
+
+
+env.addFilter('date', dateFilter);
 
 app.set('view engine', '.njk');
 

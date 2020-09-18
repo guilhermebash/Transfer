@@ -18,7 +18,7 @@ module.exports = {
 
         if (result.data.status === 1){
             request.session.token = result.data.token;
-            return response.redirect('/dashboard');
+            return response.redirect('/menus');
         }
 
         return response.render('login.njk', {error:true, message:result.data.message, user:user});

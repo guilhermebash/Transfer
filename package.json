@@ -22,6 +22,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "nunjucks": "^3.2.2",
+    "nunjucks-date-filter": "^0.1.1",
     "sha1": "^1.1.1"
   }
 }

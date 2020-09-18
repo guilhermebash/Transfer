@@ -1,0 +1,29 @@
+{% extends "base.njk" %}
+
+{% block contents %}
+<div class="container" style="margin-top: 2%;">
+    <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 box-shadow">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal"><i class="fa fa-usd" aria-hidden="true"></i></h4>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>COMPROVANTE DE RECEBIMENTO</li>
+                </ul>
+                <a href="/dashboard" class="btn btn-lg btn-block btn-outline-primary access">Acessar <i class="fa fa-sign-in" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="card mb-4"></div>
+        <div class="card mb-4"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        $('.access').click(function(){
+            $(this).html('Acessando...');
+        });
+    </script>
+{% endblock %}
