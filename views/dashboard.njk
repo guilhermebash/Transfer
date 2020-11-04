@@ -34,7 +34,7 @@
                     <div class="card-body">
                         <h5 class="card-title">CNPJ: {{unidade.cnpj}}</h5>
                         <p class="card-text">VALOR NO PERÍODO R$ {{unidade.valor}}</p>
-                        <a href="#" class="btn btn-warning">Gerar Recibo</a>
+                        <a href="{{url_recibo}}&unidade={{unidade.id}}&data_inicial={{result.date_init}}&data_final={{result.date_end}}" target="_blank" class="btn btn-warning">Gerar Recibo</a>
                     </div>
                     <div class="card-footer text-muted">
                         PERÍODO: {{result.date_init| date("DD/MM/Y")}} à {{result.date_end|date("DD/MM/Y")}}

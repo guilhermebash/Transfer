@@ -35,6 +35,8 @@ module.exports = {
             data: data
         });
 
-        return response.render('dashboard.njk', {result:result.data});
+        const url_recibo = `${connection}/comprovante?token=${request.session.token}`
+
+        return response.render('dashboard.njk', {result:result.data, url_recibo:url_recibo});
     }
 }
