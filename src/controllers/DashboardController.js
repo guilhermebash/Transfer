@@ -11,6 +11,21 @@ module.exports = {
         return response.render('menus.njk');
     },
 
+    async historico(request, response){
+        let unidade = request.params.unidade;
+        const result = await axios({
+            method: 'GET',
+            url: `${connection}/historicos`,
+            // headers: {
+            //   'Authorization': request.session.token
+            // },
+            data: {unidade:unidade}
+        });
+
+        const url_recibo = `${connection}/recomprovante?token=${request.session.token}&unidade=${unidade}`;
+        return response.render('historicos.njk', {result:result.data, url_recibo:url_recibo});
+    },
+
     async get(request, response){
 
         if (request.session.token === undefined)

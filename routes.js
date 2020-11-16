@@ -11,4 +11,6 @@ routes.post('/login', AuthController.post);
 routes.get('/dashboard', DashboardController.get);
 routes.get('/menus', DashboardController.menus);
 
+routes.get('/comprovante/historico/:unidade', DashboardController.historico);
+
 module.exports = routes;
